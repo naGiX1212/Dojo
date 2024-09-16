@@ -4,7 +4,10 @@ public class CuentaCorriente extends Cuenta{
 	private double descubierto;
 	
 	public CuentaCorriente(double descubierto) {
-		this.descubierto = descubierto;
+		if(descubierto > 0)
+			this.descubierto = descubierto;
+		else
+			descubierto = 0;
 	}
 	public void ExtraerTodo() {
 		extraer(consultarSaldo());
